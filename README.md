@@ -1,5 +1,9 @@
 # Glumina Frontend
 
+<p align="center">
+  <img src="./public/glumina-preview.png" alt="Glumina Preview" width="100%" />
+</p>
+
 Glumina is a dual-track diabetes risk prediction system built to make machine learning results easier to understand for non-technical users. Instead of only displaying a prediction label, Glumina connects user health inputs with model confidence, contributing factors, risk level, and personalized recommendations.
 
 The system provides two prediction modes: Pre-Lab Screening for users who do not have laboratory results yet, and Post-Lab Analysis for users who already have HbA1c and blood glucose values.
@@ -48,6 +52,17 @@ glumina-frontend/
 ├── vite.config.js
 └── vercel.json
 ```
+
+## Environment Variable
+
+Create a `.env` file based on `.env.example`.
+
+```env
+VITE_API_URL=https://ollyne-glumina-backend.hf.space
+```
+
+This variable connects the frontend to the deployed FastAPI backend.
+
 
 ## How to Run Locally
 
