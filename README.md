@@ -1,16 +1,71 @@
-# React + Vite
+# Glumina Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Glumina is a dual-track diabetes risk prediction system designed to make machine learning results more understandable for users. The system provides two prediction modes: Pre-Lab Screening for users without laboratory results, and Post-Lab Analysis for users who already have HbA1c and blood glucose values.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Frontend: https://glumina.vercel.app  
+Backend API: https://ollyne-glumina-backend.hf.space
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Glumina helps users estimate diabetes risk based on the type of health data they currently have. Instead of only showing a prediction label, the system also presents risk level, model confidence, contributing factors, and personalized recommendations to make the result easier to understand.
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Pre-Lab Screening using accessible non-lab inputs
+- Post-Lab Analysis using HbA1c and blood glucose values
+- Diabetes risk level output: Low, Medium, or High
+- Model confidence and contributing factor display
+- Personalized recommendation based on prediction result
+- Responsive user interface for live web access
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- Lucide React
+- Vercel
+
+## Project Structure
+
+glumina-frontend/
+├── public/
+├── src/
+├── .env.example
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── vercel.json
+
+## Environment Variable
+
+Create a `.env` file based on `.env.example`.
+
+VITE_API_URL=https://ollyne-glumina-backend.hf.space
+
+## How to Run Locally
+
+npm install
+npm run dev
+
+## Build
+
+npm run build
+
+## Deployment
+
+The frontend is deployed on Vercel and connected to a FastAPI backend hosted on Hugging Face Spaces.
+
+## Backend Repository
+
+Backend: https://huggingface.co/spaces/ollyne/glumina-backend
+
+## Medical Disclaimer
+
+Glumina is designed for diabetes risk awareness and screening support. It is not a replacement for professional medical diagnosis, laboratory testing, or consultation with healthcare professionals.
